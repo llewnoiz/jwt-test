@@ -1,0 +1,14 @@
+@TOKEN = yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvaG4iLCJzdWIiOjEsImlhdCI6MTcyOTA0NjQzNSwiZXhwIjoxNzI5MDQ2NDk1fQ.Aen7s9Hguf3QIuUJ5ChLL7yZuPDlRatfxBZWaV3msUI
+
+POST http://localhost:3000/auth/login HTTP/1.1
+content-type: application/json
+
+{"username": "john", "password": "changeme"}
+
+### 
+GET http://localhost:3000/profile HTTP/1.1
+Authorization: Bearer {{ TOKEN }}
+Content-Type: application/json; charset=UTF-8
+
+
+
